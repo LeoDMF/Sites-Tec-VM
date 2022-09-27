@@ -1,0 +1,165 @@
+/* Importando a fonte - fonts.google.com - Light 300 e Bold 700 */ 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap');
+
+/* Zerando CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fundo-tela */
+html {
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 13, 111, 0.688), rgba(255, 55, 0, 0.49)), url(/img/fundx.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-position-y: 0px;
+    background-repeat: no-repeat; 
+}
+
+/* Menu - Header - NavBar */
+.cabecalho {
+    width: 100%;
+    height: 7vh;
+    background-color: rgba(0, 0, 0, 0.681);
+}
+
+.menu-conteudo {
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.logo {
+    font-size: 1.8rem;
+    letter-spacing: 0.4rem;
+    cursor: pointer;
+}
+
+.menu-conteudo .lista-itens {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.menu-conteudo .lista-itens a{
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem;
+    transform: 2ms ease-in;
+    position: relative;
+}
+
+.menu-conteudo .lista-itens a:before {
+    content: ' ';
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color: rgb(251, 255, 0);
+    transition: all 1.5s ease;
+}
+
+.menu-conteudo .lista-itensca:hover:before{
+    width: 100%;
+}
+
+/* centro - Conteudo Principal */
+.principal {
+    height: 86vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.principal-conteudo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Textos conteudo pricipal*/
+.texto-primario {
+    width: 850px;
+    font-size: 5rem;
+    margin-bottom: 20rem;
+    text-align: center;
+}
+
+.texto-secundario {
+    justify-content: center;
+    margin-top: -15rem;
+    font-size: 2rem;
+    color:  rgb(193, 193, 193);
+    text-transform: uppercase;
+    
+
+}
+
+/* botões */
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 5rem;
+    margin-right: -22rem;
+}
+
+.botoes button {
+    width: 250px;
+    height: 60px;
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: bold;
+    letter-spacing: 0.2rem;
+    border-radius: 20px;
+    position: relative;
+    transition: 1.5s;
+}
+
+.botoes button:hover {
+    color: rgb(255, 255, 255);
+    border: none;
+}
+
+.botoes button::before {
+    content: ' ';
+    border-radius: 20px;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 0;
+    height: 60px;
+    background-color: rgba(207, 93, 0, 0.764);
+    z-index: -1;
+    transition: 1s;
+}
+
+.botoes button:hover::before {
+    width: 100%;
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 3vh;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
